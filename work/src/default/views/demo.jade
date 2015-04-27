@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/vendor/semantic-ui/dist/semantic.css')
+    link(rel='stylesheet', href='/css/main.css')
+
+    title SpringHispano
+
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+  body
+    include ./_/seccion
+
+    header.ui.vertical.segment
+      .ui.page.grid
+        section.column
+          img(src='/img/logo.jpg')
+
+    nav.ui.vertical.segment
+      .ui.page.grid
+        .ui.borderless.text.menu
+          a.item.active(href='#') Home
+          a.item(href='#') Noticias
+          a.item(href='#') Articulos
+          a.item(href='#') Presentaciones
+          a.item(href='#') Entrevistas
+          a.item(href='#') Eventos
+
+    main.ui.page.grid.segment
+      .container
+        .ui.grid.stackable.items.segment
+          .twelve.wide.column
+            +seccion('Notas rifadas')
+            +seccion('Eventos')
+          .four.wide.column
+            h3 Popular
+            include ./_/lateral
+
+
+    footer.ui.vertical.segment
+      .ui.page.grid
+        section.column.
+          A nice footer here
+
+
+    scripts(src='/vendor/jquery/dist/jquery.js')
+    scripts(src='/vendor/semantic-ui/dist/semantic.js')
