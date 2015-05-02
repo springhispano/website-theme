@@ -17,11 +17,12 @@ html
         section.column
           img(src='/img/logo.jpg')
 
+
     nav.ui.vertical.segment
       .ui.page.grid
         .ui.borderless.text.menu
           a.item.active(href='#') Home
-          a.item(href='#') Noticias
+          a.item(href='/noticias/index.html') Noticias
           a.item(href='#') Articulos
           a.item(href='#') Presentaciones
           a.item(href='#') Entrevistas
@@ -31,8 +32,8 @@ html
       .container
         .ui.grid.stackable.items.segment
           .twelve.wide.column
-            +seccion('Notas rifadas')
-            +seccion('Eventos')
+            include ./_/portada/noticias
+            include ./_/portada/eventos
           .four.wide.column
             h3 Popular
             include ./_/lateral
